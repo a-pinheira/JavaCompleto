@@ -1,5 +1,7 @@
 # JavaCompleto
-##Tipos de Classs 
+Requisto para aprendizagem do Estágio Qintess
+
+## Tipos de Classs 
 - Exends
 - Classes Abstradas (abstract)
 ° Classe Imcompleta

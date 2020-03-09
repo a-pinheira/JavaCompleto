@@ -39,8 +39,14 @@ public class Cliente {
 		this.rg = rg;
 	}
 	
-	
-	
-	
+	public Cliente (String nome, String cpf, String email, String senha, String rg) {
+		this.nome = nome;
+		this.cpf = cpf;
+		this.email = email;
+		this.senha = senha;
+		this.rg = rg;		
+	}
+
+
 
 }

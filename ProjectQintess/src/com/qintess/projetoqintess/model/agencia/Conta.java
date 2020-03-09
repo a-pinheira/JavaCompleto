@@ -61,7 +61,7 @@ public class Conta {
 	// Todo saque o cliente tem que pagar 0.30centavos
 	public void saque(double valor) {
 		System.out.println("Digite o valor " + valor);
-		if (saldo > 0) {
+		if (saldo > 0 && valor <=300) {
 			if (saldo + limite >= valor) { // saldo tem q estar protected
 				saldo -= valor + 0.30;
 				// acumularIFN(valor);
@@ -88,7 +88,7 @@ public class Conta {
 	public void transferencia(Conta destinatario, Conta remetente, double valor) {
 		System.out.println("Valor da Transferência: ");
 		// valor = leia.nextDouble();
-		if (remetente.getSaldo() >= valor) {
+		if (remetente.getSaldo() >= valor+4) {
 			this.saldo -= valor + 4;
 			System.out.println("Transferindo valor... " + valor);
 			destinatario.setSaldo(destinatario.getSaldo() + valor);

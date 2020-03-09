@@ -9,13 +9,14 @@ public class ContaCorrente extends Conta{
 		super(agencia, numero, saldo, cliente);
 		// TODO Auto-generated constructor stub
 	}
+	public double creditoEspecial (double valor) {
 		
 	public void sacarDinheiro(double valor) {
 		if(valor<=getSaldo()) {
 			if(valor>300) {
 				System.out.println("Só é possível sacar até R$300,00");
 			} else{ 
-				/*if(valor>getSaldo()-limite){
+				if(valor>getSaldo()-limite){
 					setCreditoEspecial(-(valor-getSaldo()));
 					limite -= creditoespecial;
 					super.sacarDinheiro(valor);	
@@ -55,3 +56,4 @@ public class ContaCorrente extends Conta{
 	
 	}
 
+}

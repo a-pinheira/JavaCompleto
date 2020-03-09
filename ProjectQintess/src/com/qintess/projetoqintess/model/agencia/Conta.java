@@ -8,6 +8,7 @@ public class Conta {
 
 	// private Conta Conta;
 	private double limite;
+	private double chequeEspecial;
 
 	public double getAgencia() {
 		return agencia;
@@ -61,11 +62,24 @@ public class Conta {
 	// Todo saque o cliente tem que pagar 0.30centavos
 	public void saque(double valor) {
 		System.out.println("Digite o valor " + valor);
-		if (saldo > 0 && valor <=300) {
+		if ((saldo > 0) && (valor <=800) ) {
 			if (saldo + limite >= valor) { // saldo tem q estar protected
 				saldo -= valor + 0.30;
 				// acumularIFN(valor);
-				System.out.println("Retire o seu Dinheiro " + valor);
+				// Tratar Limite 300 + qual valor faltando do limite
+				/*
+				 * Limite = valor
+				 * Passou Limite é externo ao saldo
+				 * ChequeEspecial <= 300
+				 * valor <= chequeEspecial + 2;
+				 * */
+				System.out.println("Retire o seu Dinheiro com a taxa de 0.30, transação sem entrar no cheque especial" + valor);
+				{ if (chequeEspecial <= 300){
+					saldo -= valor + 2;
+					System.out.println("Valor retirado  do cheque especial, a taxa eh de 2,0 ");
+					
+				}
+				}
 			} else {
 				System.out.println("Saldo Insuficiente");
 			}
@@ -101,6 +115,6 @@ public class Conta {
 		// sacar();
 		// c.depositar();
 
-	}
+}
 
 }

@@ -23,6 +23,6 @@ Com 4 Classes: </br>
   2 Todo saque o cliente tem que pagar taxa de 0.30 reais </br>
   3 Caso ele esteja utilizando o cheque especial essa taxa sobe pra 2 reais </br>
   4 Toda transferencia tem taxa de 4 reais </br>
-
+  
 -----------------------------
 By Simone Machado

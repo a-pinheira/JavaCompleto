@@ -1,0 +1,3 @@
+1123;124192;7;1232,89;1232;123.123.123-33;Gustavo Martins;gustavo@email.com;CC
+1231;151223;2;122,43;122;123.123.123-33;Simone Machado;simone@simone.com;CP
+1231;151223;2;122,43;122;123.123.123-33;André Romani;andre@andre.com;CP

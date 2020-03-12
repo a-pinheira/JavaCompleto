@@ -6,22 +6,20 @@ import com.qintess.projetoqintess.model.agencia.Conta;
 public class executaConta {
 
 	public static void main (String args[]) {
-		//Instância de conta
+		//Instância- executa de conta
 		Conta contaCliente = new Conta(0, 0, 0, null); //passa paramentros dentro de conta(), se usar construtor
 		contaCliente.setAgencia(4300); //acessando esta instancia por meio da variável e passando um valor para ela
 	    //contaCliente.getAgencia();
-		/*
+		/*//cria uma instancia de CLIENTE
 	    Cliente cliente = new Conta("Joao", 1212125, 1231231232, null);
-		Cliente cliente2 = new Cliente("Bruno", 1212123, 1231231233);
 		// cria uma conta corrente
-		ContaCorrente contacorrente2 = new ContaCorrente(1234, 568, 200, cliente2, 500);
+		ContaCorrente cce2 = new ContaCorrente(1234, 568, 200, cliente2, 500);
 		// cria uma conta poupanca
 		ContaPoupanca contapoupanca = new ContaPoupanca(1235, 555, 3000, cliente);
-		// cria uma conta corrente
-		ContaCorrente contacorrente = new ContaCorrente(1234, 567, 5000, cliente, 500);
 		*/
 		System.out.println("Retorna o número da agencia" + contaCliente.getAgencia());
 		// Instancia de  Cliente
+		
 		Cliente contaCli = new Cliente("Simone", "123.455.654/98", "simone@uhul.com", "22.123.432-5", "go@123");
 		contaCli.setNome("Simone");
 		contaCliente.setCliente(contaCli);

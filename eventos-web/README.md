@@ -4,7 +4,7 @@
 - JAR do conector MYSQL
 
 # Tecnologias
-- JARs da biblioteca JPA, implementação Hibernate
+- Implementação Hibernate/JPA
 - Container (servidor) Web: Tomcat 9
 
 
@@ -12,7 +12,9 @@
 - Spring MVC - Padrão de  Projeto
 - Srpring Boot - Infraestrutura de Configurações
 - Maven - Gerenciamento de Dependências
-- View: JPA e bootstrap
+- View: JSP e bootstrap
+- BD: Framework: JPA
+  -- Objeto de Acesso dos dados: DAO
 
 ## Estrutura do artigo
 - Criação do projeto de exemplo e configuração da biblioteca JPA

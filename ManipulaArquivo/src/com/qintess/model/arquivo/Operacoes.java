@@ -1,8 +1,14 @@
 package com.qintess.model.arquivo;
 
+import java.util.ArrayList;
 import java.util.Date;
-
-//import java.sql.Time; para horas
+import java.util.List;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.sql.Time; //para horas
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 
 public class Operacoes {
 	private Long cv_operacao;
@@ -32,7 +38,7 @@ public class Operacoes {
 			String nm_Estrategia, String nm_Centralizador, String nm_Gestor, String nm_SubGestor, String nm_SubProduto,
 			String nm_Caracteristica, String cd_AtivoObjeto, double quantidade, long id_Preco,
 			DadosMercado dadosMercado) {
-		super();
+		//super();
 		this.cv_operacao = cv_operacao;
 		this.dt_inicio = dt_inicio;
 		this.dt_fim = dt_fim;
@@ -48,6 +54,18 @@ public class Operacoes {
 		this.quantidade = quantidade;
 		this.id_Preco = id_Preco;
 		this.dadosMercado = dadosMercado;
+		this.dadosMercado.getNuPrazoDiasCorridos();
+		//= ((dt_fim.getTime() - dt_inicio.getTime()) / (24 * 60 * 60 * 1000)));
+		//this.getDadosMercado().getNuPrazoDiasCorridos( ((dt_fim.getTime() - dt_inicio.getTime()) / (24 * 60 * 60 * 1000)));
+		//Long.parseLong(dadosMercado.getNuPrazoDiasCorridos, (("hhmm", linha2.UPDTIME), "mm") <= "60" && Long.parseLong (TalendDate.diffDate (TalendDate.parseDate 
+				//("hhmm", TalendDate.getDate ("hhmm")), TalendDate.parseDate ("hhmm", linha2.UPDTIME), "mm"))> = "1"
+			
+	
+	}
+
+
+	public Operacoes(int cd, int prazo, double qtd, int id_preco2, String subprod) {
+		// TODO Auto-generated constructor stub
 	}
 
 
@@ -200,6 +218,41 @@ public class Operacoes {
 		this.dadosMercado = dadosMercado;
 	}
 	
+	public static List<Operacoes> getOperacoes(String path) throws IOException{
+		BufferedReader bf = new BufferedReader(new FileReader(path));
+		List<Operacoes> lista = new ArrayList<Operacoes>();
+		String linha;
+		bf.readLine();
+		while ((linha = bf.readLine()) != null) {
+			String[] colunas = linha.split(";");
+			int cd = Integer.parseInt(colunas[0]);
+			int prazo = Operacoes.calcularDias(colunas[1], colunas[2]);
+			double qtd = Double.parseDouble(colunas[12].replace(',', '.'));
+			int id_preco = Integer.parseInt(colunas[13]);
+			String subprod = colunas[9];
+			Operacoes operacao = new Operacoes(cd, prazo, qtd, id_preco, subprod);
+			lista.add(operacao);
+		}
+		bf.close();
+		return lista;
+		
+	}
+
+	public static int calcularDias(String dataInicio, String dataFinal) {
+		 DateFormat df = new SimpleDateFormat ("dd/MM/yyyy");
+	        df.setLenient(false);
+	        Date d1 = null;
+	        Date d2 = null;
+	        try {
+	        	d1 = df.parse (dataInicio);
+	        	d2 = df.parse (dataFinal);
+	        }catch(Exception e) {
+	        	
+	        }
+	        long dt = (d2.getTime() - d1.getTime()) + 3600000; // 1 hora para compensar horário de verão
+	        int dias =  (int) (dt / 86400000L);
+			return dias; 
+	}
 	
 	
 

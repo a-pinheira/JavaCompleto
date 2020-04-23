@@ -16,11 +16,11 @@
 
 ## Manipulação de Arquivos
 Com 2 Classes: </br>
-° ExecutaArq.java
-° LêArq.java
+° ExecutaArq.java (1 arquvios com o Resultado de Calculos sobre os outros arquivos de leitura)
+° LêArq.java (2 arquvios)
 - Regras de Negócios conforme especificaçõe do Word </br>
 ° Leitura de 2 arquivos cvs:  </br>
-  1 Fazer os calculos correspondetes
+  1 Fazer os calculos correspondetes e gerar um arquivos resultado
   
 -----------------------------
 By Simone Machado

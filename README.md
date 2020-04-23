@@ -1,6 +1,6 @@
-.............................
-"Um homem pinta com seu cérebro e não com suas mãos." -- Michelangelo
-.............................
+............................. </br>
+"Um homem pinta com seu cérebro e não com suas mãos." Michelangelo </br>
+............................. </br>
 
 # JavaCompleto
 - Um estudo JAVA

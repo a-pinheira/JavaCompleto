@@ -1,8 +1,14 @@
+.............................
+"Um homem pinta com seu cérebro e não com suas mãos." -- Michelangelo
+.............................
+
 # JavaCompleto
-- Estágio Qintess
+- Um estudo JAVA
 
 ## Todos os projetos 
-- Projeto Banco 
+- Projetos CRUD com
+  ° BD: MySQL, Postgree, H2
+  
 - Classes Abstradas (abstract) </br>
 ° Polimorfirmos </br>
 ° Herança </br>

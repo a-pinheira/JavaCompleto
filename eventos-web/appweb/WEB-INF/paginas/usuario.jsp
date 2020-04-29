@@ -16,8 +16,27 @@
 	<hr />
 
 	<form:form action="salva" modelAttribute="usuario">
-	
-	
+		<form:hidden path="codEvento" />
+		<label>Nome Completo: </label>
+		<form:input path="nomeUser" />
+		<br />
+
+		<label>Email </label>
+		<form:input path="email" />
+
+		<label>CPF </label>
+		<form:input path="cpf" />
+
+		<label>Telefone </label>
+		<form:input path="telefone" />
+
+		<br />
+			<form:button>Cadastrar Usuario</form:button>
+		<hr />
+
+		<c:forEach var="evento" items="${usuario}">
+		</c:forEach>
+
 	</form:form>
 </body>
 </html>

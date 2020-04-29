@@ -11,7 +11,7 @@
 <body>
 	<h1>Tela Inicial: Site de Eventos On-line</h1>
 	<hr />
-	<a href="${produto}}"> CRUD Evento </a>
+	<a href="${evento}"> CRUD Evento </a>
 
 </body>
 </html>

@@ -12,14 +12,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.servicos.eventos.controllers.repository.EventoRepository;
 import com.servicos.eventos.models.Evento;
-import com.servicos.eventos.repository.EventoRepository;
 
 //CONTROLLER (Resourcce)
 //@Controller do Spring simples
 
 //Anotação parecida com a @Controller
-@RestController
+//@RestController
 //Vai mapear os recursos do objeto Evento.java
 @RequestMapping("/evento")
 public class EventoResource {
